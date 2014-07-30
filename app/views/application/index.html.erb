@@ -1,0 +1,46 @@
+<script src="//code.jquery.com/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>  
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ideas</a>
+    </div>
+
+  </div>
+</nav> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Ideas</h1>
+      </div>
+    </div>
+     <p>
+<a href="http://gitbox-131549.use1.nitrousbox.com:8080/new_idea" class="new">New Idea</a>
+</p>
+    <p>
+    
+    </p>
+    <ul>
+   
+      
+      
+      <% @i.each do |idea| %>
+      
+        <li>
+          <h3><%= @i.descrip %></h3>
+          <a href=<%= "http://gitbox-131549.use1.nitrousbox.com:8080/idea/#{idea.id}/edit" %> >Edit</a> 
+      
+        <br>
+      </li>
+    
+    <% end %>
+</ul>
